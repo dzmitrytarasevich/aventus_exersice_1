@@ -36,22 +36,33 @@ Now you can install helm chart, containing
 - postgresql v16.2 helm chart
 - pgadmin4 helm chart
 
-`helm install -f ./flask-app/values.yaml flask-app -n flask-app .`
+`helm install flask-app -n flask-app ./flask-app`
 
 Flask app will be accessble via http://K8S_NODE_IP:30500/
+
 Flask endpoints available:
+
 http://K8S_NODE_IP:30500/endpoint1
+
 http://K8S_NODE_IP:30500/endpoint2
+
 
 Those endpoints return content of postgresql tables endpoint1 and endpoint2, stored in db db_exercise_1
 
 Postgresql credentials hardcoded into helm version but they are using env vars in docker-compsoe version:
+
 dbname="db_exercise_1"
+
 user="postgres"
+
 password="postgres"
+
 host="flask-app-postgresql" (here postgresql service's name is used).
 
 pgadmin4 is available http://K8S_NODE_IP:PGADMIN4_SERVICE_PORT
+
 pgadmin4 credentials:
+
 username - devops@example.com
+
 password - devops
