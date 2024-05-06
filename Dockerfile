@@ -1,7 +1,7 @@
 FROM python:3.12.3
 
 WORKDIR /app
-ENV FLASK_APP=/app/hello.py
+ENV FLASK_APP=/app/hello_helm.py
 
 COPY . .
 
