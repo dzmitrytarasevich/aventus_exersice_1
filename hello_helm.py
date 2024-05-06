@@ -5,7 +5,7 @@ import yaml
 
 app = Flask(__name__)
 
-with open('values.yaml', 'r') as file:
+with open('./flask-app/values.yaml', 'r') as file:
     data = yaml.safe_load(file)
 
 postgres_user = data['postgresql']['global']['postgresql']['auth']['username']
