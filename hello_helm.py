@@ -1,23 +1,23 @@
-import os
+#import os
 from flask import Flask, jsonify
 import psycopg2
 import yaml
 
 app = Flask(__name__)
 
-with open('values.yaml', 'r') as file:
+with open("values.yaml", "r") as file:
     data = yaml.safe_load(file)
 
-postgres_user = data['postgresql']['global']['postgresql']['auth']['username']
-postgres_password = data['postgresql']['global']['postgresql']['auth']['password']
-postgres_database = data['postgresql']['global']['postgresql']['auth']['database']
+postgres_user = values["postgresql"]["global"]["postgresql"]["auth"]["username"]
+postgres_password = values["postgresql"]["global"]["postgresql"]["auth"]["password"]
+postgres_database = values["postgresql"]["global"]["postgresql"]["auth"]["database"]
 
 def connect_to_db():
     conn = psycopg2.connect(
         host=flask-app-postgresql,
-        database={postgres_database},
-        user={postgres_user},
-        password={postgres_password}
+        database=postgres_database,
+        user=postgres_user,
+        password=postgres_password
     )
     return conn
 
