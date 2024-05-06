@@ -10,10 +10,10 @@ with open('values.yaml', 'r') as file:
 
 def connect_to_db():
     conn = psycopg2.connect(
-        host=flask-app-postgresql,
-        database=data['postgresql']['global']['postgresql']['auth']['database'],
-        user=data['postgresql']['global']['postgresql']['auth']['username'],
-        password=data['postgresql']['global']['postgresql']['auth']['password']
+        host="flask-app-postgresql",
+        database="data['postgresql']['global']['postgresql']['auth']['database']",
+        user="data['postgresql']['global']['postgresql']['auth']['username']",
+        password="data['postgresql']['global']['postgresql']['auth']['password']"
     )
     return conn
 
