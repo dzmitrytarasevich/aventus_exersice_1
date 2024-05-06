@@ -5,7 +5,7 @@ import yaml
 
 app = Flask(__name__)
 
-with open('./flask-app/values.yaml', 'r') as file:
+with open('values.yaml', 'r') as file:
     data = yaml.safe_load(file)
 
 def connect_to_db():
