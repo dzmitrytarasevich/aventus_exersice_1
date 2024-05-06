@@ -11,16 +11,15 @@ with open('values.yaml', 'r') as file:
 def connect_to_db():
     conn = psycopg2.connect(
         host="flask-app-postgresql",
-        database="data['postgresql']['global']['postgresql']['auth']['database']",
-        user="data['postgresql']['global']['postgresql']['auth']['username']",
-        password="data['postgresql']['global']['postgresql']['auth']['password']"
+        database="db_exercise_1",
+        user="postgres",
+        password="postgres"
     )
     return conn
 
 @app.route('/')
 def main_page():
     return 'Hello from main page!'
-    print (connect_to_db)
 
 @app.route('/endpoint1')
 def get_table1_data():
