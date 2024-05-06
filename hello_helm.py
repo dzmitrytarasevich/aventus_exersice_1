@@ -8,9 +8,9 @@ app = Flask(__name__)
 with open("values.yaml", "r") as file:
     data = yaml.safe_load(file)
 
-postgres_user = values["postgresql"]["global"]["postgresql"]["auth"]["username"]
-postgres_password = values["postgresql"]["global"]["postgresql"]["auth"]["password"]
-postgres_database = values["postgresql"]["global"]["postgresql"]["auth"]["database"]
+postgres_user = data["postgresql"]["global"]["postgresql"]["auth"]["username"]
+postgres_password = data["postgresql"]["global"]["postgresql"]["auth"]["password"]
+postgres_database = data["postgresql"]["global"]["postgresql"]["auth"]["database"]
 
 def connect_to_db():
     conn = psycopg2.connect(
