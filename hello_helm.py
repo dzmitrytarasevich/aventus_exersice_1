@@ -12,9 +12,7 @@ postgres_user = data["postgresql"]["global"]["postgresql"]["auth"]["username"]
 postgres_password = data["postgresql"]["global"]["postgresql"]["auth"]["password"]
 postgres_database = data["postgresql"]["global"]["postgresql"]["auth"]["database"]
 
-print(postgres_user)
-print(postgres_password)
-print(postgres_database)
+print(postgres_user, postgres_password, postgres_database)
 
 def connect_to_db():
     conn = psycopg2.connect(
