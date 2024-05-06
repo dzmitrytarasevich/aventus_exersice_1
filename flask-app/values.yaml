@@ -2,21 +2,21 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 postgresql:
-  global.postgresql.auth.username: postgres
-  global.postgresql.auth.password: postgres
-  global.postgresql.auth.database: db_exercise_1
-  primary.initdb.scripts:
-    init_table.sql: |-
-      create table endpoint1 (
-        id SERIAL PRIMARY KEY,
-        name varchar(100)
-      );
-      insert into endpoint1 (name) values ('endpoint1');
-      create table endpoint2 (
-        id SERIAL PRIMARY KEY,
-        name varchar(100)
-      );
-      insert into endpoint2 (name) values ('endpoint2');
+  global:
+    postgresql:
+      auth:
+        username: postgres
+        password: postgres
+        database: db_exercise_1
+  primary:
+    initdb:
+      scripts:
+        init_table.sql: |-
+          create table endpoint1 (id SERIAL PRIMARY KEY, name varchar(100));
+          insert into endpoint1 (name) values ('endpoint1');
+          create table endpoint2 (id SERIAL PRIMARY KEY, name varchar(100));
+          insert into endpoint2 (name) values ('endpoint2');
+
 
 replicaCount: 1
 
