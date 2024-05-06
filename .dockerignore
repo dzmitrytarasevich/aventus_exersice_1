@@ -1,6 +1,0 @@
-Dockerfile
-./__pycache__/
-./venv/
-.dockerignore
-docker-compose.yaml
-./sql_init
