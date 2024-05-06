@@ -21,6 +21,7 @@ services:
     image: flask_app:0.1
     build:
       context: .
+      dockerfile: Dockerfile-compose
     container_name: flask_app
     depends_on:
       postgres:
