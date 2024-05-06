@@ -23,9 +23,12 @@ def connect_to_db():
     )
     return conn
 
+
+
 @app.route('/')
 def main_page():
     return 'Hello from main page!'
+    print (connect_to_db)
 
 @app.route('/endpoint1')
 def get_table1_data():
