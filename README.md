@@ -1,4 +1,4 @@
-Project for Loomis TF infrastructure
+Project for COMPANY TF infrastructure
 
 - Branches should be created with ticket id as the name. i.e. `git checkout -b BRANCH_NAME`
 - minimum of 1 approver for merging to master
